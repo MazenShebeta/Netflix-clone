@@ -1,0 +1,45 @@
+/* netflix clone style */
+
+.row {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin: 0 0 0 2rem;
+  padding: 1.5rem 0 1.875rem 0;
+}
+
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  max-height: 100px;
+  object-fit: contain;
+  margin-right: 1.875rem;
+  transition: transform 450ms;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
