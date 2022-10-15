@@ -1,6 +1,6 @@
 /* netlfix banner style */
 .banner {
-  height: 448px;
+  height: 550px;
   object-fit: contain;
   color: white;
   background-position: center;
@@ -72,7 +72,7 @@
 }
 
 .banner--fadeBottom {
-  height: 7.4rem;
+  height: 13.75em;
   background-image: linear-gradient(
     180deg,
     transparent,
