@@ -7,7 +7,7 @@ import { BiSearch } from "react-icons/bi";
 import axios from "axios";
 
 const Search = () => {
-  // const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
 
 
@@ -33,17 +33,30 @@ const Search = () => {
       e.preventDefault();
     };
 
+    function handleClick(){
+      console.log("clicked")
+      //make search empty
+      setSearch("");
+      //hide search results
+      document.querySelector(".search-result").style.display = "none";
+      //clear search results
+      setResults([]);
+    }
   //when something is typed in the search bar, results are shown
 
   return (
     <div>
       <form className="search-box" onSubmit={handleSubmit}>
-        <button className="btn-search">
+        <button 
+        //when clicked, search bar is automatically focused
+        onClick={() => document.querySelector(".search").focus()}
+        className="btn-search">
           <BiSearch />
         </button>
         <input
           type="text"
           className="search"
+
           // placeholder="Search"
           onChange={(e) => handleChange(e.target.value)}
         />
@@ -52,12 +65,11 @@ const Search = () => {
         <h1>Search Results</h1>
         {results.map((movie) => (
           <Link to={`/movie/${movie.id}`}>
-            <div className="movie-found">
+            <span onClick={() => handleClick()} className="movie-found">
               <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
               {/* // alt={movie.title} */}
               <h3>{movie.title}</h3>
-              
-            </div>
+            </span>
           </Link>
         ))}
       </div>
