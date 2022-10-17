@@ -58,9 +58,32 @@
   .search-result{
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
+    left: 100;
+    width: 350px;
+    /* opacity of background color */
+    background-color: rgba(0,0,0,.5);    
+    overflow-y: auto;
+    max-height: 400px;
     z-index: 2;
     display: none;
+  }
+
+  .movie-found{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    text-decoration: none;
+    color: #fff;
+  }
+  .movie-found:hover{
+    background-color: #333;
+  }
+
+  .movie-found img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
   }

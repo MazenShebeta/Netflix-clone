@@ -39,9 +39,13 @@ const Banner = () => {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <Link to={`/movie/${movie.id}`}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.netflix.com/eg-en/"
+          >
             <button className="banner__button">Play</button>
-          </Link>
+          </a>
           {/* <button className="banner__button">My List</button> */}
         </div>
         <h1 className="banner__description">
