@@ -3,6 +3,7 @@ import "./Banner.css";
 import { useEffect, useState } from "react";
 import axios from "../../Requests/axios";
 import requests from "../../Requests/requests";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
@@ -38,8 +39,10 @@ const Banner = () => {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My List</button>
+          <Link to={`/movie/${movie.id}`}>
+            <button className="banner__button">Play</button>
+          </Link>
+          {/* <button className="banner__button">My List</button> */}
         </div>
         <h1 className="banner__description">
           {truncate(movie?.overview, 150)}

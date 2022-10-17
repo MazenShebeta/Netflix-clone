@@ -1,0 +1,85 @@
+/* netlfix banner style */
+.banner {
+    height: 650px;
+    object-fit: contain;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: ;
+  }
+  
+  .banner__contents {
+    margin-left: 30px;
+    padding-top: 220px;
+    max-width: 650px;
+    width: 100%;
+    height: 190px;
+    color: #fff;
+    /* add text shadow */
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .banner__title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+  }
+  
+  .banner__description {
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 80px;
+  
+  }
+  
+  .banner__buttons {
+    display: flex;
+  
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .banner__button {
+    padding: 0.5rem 2rem;
+    /* font-size: 1.2rem; */
+    font-weight: 700;
+    border-radius: 0.2vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(51, 51, 51, 0.5);
+    color: white;
+  }
+  
+  .banner__button:hover {
+    transform: scale(1.05);
+    color: #000;
+    background-color: #fff;
+    transition: all 0.2s;
+  }
+  
+  .banner__button--primary {
+    background-color: #e50914;
+    color: #fff;
+  }
+  
+  .banner__button--secondary {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .banner--fadeBottom {
+    height: 15em;
+    background-image: linear-gradient(
+      180deg,
+      transparent,
+      rgba(37, 37, 37, 0.61),
+      #111
+    );
+  }
+  

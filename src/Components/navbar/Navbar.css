@@ -11,6 +11,15 @@
   transition: all 0.5s;
 }
 
+.SearchnAvatar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 20%; */
+
+}
+
 .nav__black {
   background-color: #000;
   color: #fff;

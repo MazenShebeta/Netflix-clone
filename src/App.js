@@ -3,26 +3,24 @@ import Row from "./Components/Row/Row";
 import requests from "./Requests/requests";
 import Navbar from "./Components/navbar/Navbar";
 import Banner from "./Components/banner/Banner";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Layout from "./Components/Layout/Layout";
+import MoviePage from "./Components/moviePage/MoviePage";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Banner />
-      <Row
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumantaries} />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="/movie/:id" element={<MoviePage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
+
+//routes for the movie page
 
 export default App;
